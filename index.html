@@ -2,9 +2,69 @@
 <html>
 <head>
 	<title>Quiz App Challenge</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+
 </head>
 
 <body>
+
+	<nav>
+      <h1 class="title">Front End Developer Quiz</h1>
+      
+      <div class="counter">Question: <span class="js-counter">1</span> of 10</div><br>
+      <div class="score">Correct: <span class="js-score-correct">0</span></div>
+      <div class="score">Incorrect: <span class="js-score-incorrect">0</span></div>
+    </nav>
+    
+    
+    <section class="js-question">
+      <form id="js-form-q1">
+        <div class="question" id="q1">1. Question goes in here?</div><br>
+        <input type="radio" /> A. First answer.</input><br>
+        <input type="radio" /> B. Second answer.</input><br>
+        <input type="radio" /> C. Third answer.</input><br>
+        <input type="radio" /> D. Fourth answer.</input><br>
+        <br>
+
+        <button class="button js-previous-button">Previous</button>
+        <button class="button js-next-button">Next</button>
+      </form>
+<!--       Question goes in here -->
+    </section>
+
+		// Header (fixed) with title= Test your html/css/js skills.
+
+		// button: Begin Quiz
+
+		// template with: form / fieldset with question and multiple choice with radio
+
+		// (check if template would be best to do a div or form, fieldset, input, etc)
+
+		// Template must be interactive and must identify the correct response.
+
+		// 1. Ask the question?
+		// 		a. answer
+		// 		b. answer
+		// 		c. answer
+		// 		d. answer
+
+		// Next Button
+
+		// 
+
+
+		// page needs to refresh with new question
+		// need to keep a counter (ex. 7 of 10)
+		// need to keep score (ex. Correct = 3 / Incorrect = 4)
+
+		// 'If - value = .correct' or something like this
+
+
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 
 </body>
 </html>
