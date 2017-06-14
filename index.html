@@ -10,57 +10,194 @@
 
 <body>
 
-	<nav>
+	<aside>
       <h1 class="title">Front End Developer Quiz</h1>
       
-      <div class="counter">Question: <span class="js-counter">1</span> of 10</div><br>
+      <div class="counter">Question: <span class="js-counter">0</span> of 10</div><br>
       <div class="score">Correct: <span class="js-score-correct">0</span></div>
       <div class="score">Incorrect: <span class="js-score-incorrect">0</span></div>
-    </nav>
+    </aside>
     
-    
-    <section class="js-question">
-      <form id="js-form-q1">
-        <div class="question" id="q1">1. Question goes in here?</div><br>
-        <input type="radio" /> A. First answer.</input><br>
-        <input type="radio" /> B. Second answer.</input><br>
-        <input type="radio" /> C. Third answer.</input><br>
-        <input type="radio" /> D. Fourth answer.</input><br>
-        <br>
+    <section id="js-insert-template">
 
-        <button class="button js-previous-button">Previous</button>
-        <button class="button js-next-button">Next</button>
+      <form class="form-question" id="js-form-begin-quiz" hidden>
+        <div class="question" id="js-text-begin-quiz">
+        	<p>Take this quiz to test your front end developer knowledge.</p><br>
+        	<p>Press "Start" to begin...Good Luck!</p>
+        </div><br>
+
+        <button class="button" id="js-button-start">Start</button>
       </form>
-<!--       Question goes in here -->
+
     </section>
 
-<!-- 	Header (fixed) with title= Test your html/css/js skills.
+      <form class="form-question" id="js-form-temp" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit-temp">Submit</button>
+        </fieldset>
+      </form>
 
-		button: Begin Quiz
+<!-- 
+		On click 'Start' 
+			1. add 'hidden' to '#js-form-begin-quiz'
+			2. remove 'hidden' to '#js-form-q1' 
+		
+		On click 'Submit'
+			1. find 'correct' value
+				if value = 'correct' - score-correct++
+				else score-incorrect++
 
-		template with: form / fieldset with question and multiple choice with radio
+		On click 'End'
+			1. reset form and restart test
+ -->
 
-		(check if template would be best to do a div or form, fieldset, input, etc)
+	<form class="form-question" id="js-form-end-quiz" hidden>
+        <div class="question" id="js-text-end-quiz">
+        	<p>Thank you for taking the quiz!</p><br>
+        	<p>Press "End"</p>
+        </div><br>
 
-		Template must be interactive and must identify the correct response.
-
-		1. Ask the question?
-		 		a. answer
-		 		b. answer
-		 		c. answer
-		 		d. answer
-
-		 Next Button
-
-		 
+        <button class="button" id="js-button-end">End</button>
+    </form>
 
 
-		 page needs to refresh with new question
-		 need to keep a counter (ex. 7 of 10)
-		 need to keep score (ex. Correct = 3 / Incorrect = 4)
+<!-- ****** ALL QUESTIONS BELOW ********** -->
 
-		 'If - value = .correct' or something like this -->
+    <form class="form-question" id="js-form-q1" >
+        <fieldset id="">
+        	<legend id="">1. What does HTML and CSS stand for?</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q1-ans-a" value="incorrect"> A. <span>They are the initials for the two guys that invented the internet.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q1-ans-b" value="incorrect"> B. <span>High-Tech Management Linguistics and Computer System Software.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q1-ans-c" value="correct"> C. <span>HyperText Markup Language and Cascading Style-Sheets.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q1-ans-d" value="incorrect"> D. <span>They are the commands that describe the structure and form of a website.</span>
+	        	</label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit-q1">Submit</button>
+        </fieldset>
+    </form>
 
+    <form class="form-question" id="js-form-q2" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form class="form-question" id="js-form-q3" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form class="form-question" id="js-form-q4" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form class="form-question" id="js-form-q5" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit">Submit</button>
+        </fieldset>
+    </form>    
+
+    <form class="form-question" id="js-form-q6" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form class="form-question" id="js-form-q7" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form class="form-question" id="js-form-q8" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <form class="form-question" id="js-form-q9" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit">Submit</button>
+        </fieldset>
+    </form>
+
+
+    <form class="form-question" id="js-form-q10" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit">Submit</button>
+        </fieldset>
+    </form>
+ 
 
 
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
@@ -68,3 +205,23 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
