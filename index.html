@@ -22,14 +22,14 @@
     	
     </section> -->
 
-      <form class="form-question" id="js-form-begin-quiz" hidden>
+      <div class="form-question" id="js-form-begin-quiz">
         <div class="question" id="js-text-begin-quiz">
         	<p>Take this quiz to test your front end developer knowledge.</p><br>
         	<p>Press "Start" to begin...Good Luck!</p>
         </div><br>
 
-        <button class="button" id="js-button-start">Start</button>
-      </form>
+        <a href="#" class="button" id="js-button-start">Start</a>
+      </div>
 
 <!--       <form class="form-question" id="js-form-temp" hidden>
         <fieldset id="">
@@ -77,6 +77,11 @@ var currentQuestion = allQuestions[i];
 
 allQuestions = [$('#js-form-q1'),$('#js-form-q2'),$('#js-form-q3'),$('#js-form-q4'),$('#js-form-q5'),$('#js-form-q6'),$('#js-form-q7'),$('#js-form-q8'),$('#js-form-q9'),$('#js-form-q10')];
 
+allQuestions = $('form').each(function(){
+	var form = $(this);
+	console.log($(form).attr('id'));
+});
+
 for (var i=0; i<allQuestions.length; i++) {
 	currentQuestion.show();
 }
@@ -89,19 +94,19 @@ for (var i=0; i<allQuestions.length; i++) {
         <fieldset id="">
         	<legend id="">1. What does HTML and CSS stand for?</legend><br>
 	        	<label>
-	        		<input type="radio" id="js-q1-ans-a" value="incorrect"> A. <span>They are the initials for the two guys that invented the internet.</span>
+	        		<input type="radio" name="js-question-1" id="js-q1-ans-a" value="incorrect"> A. <span>They are the initials for the two guys that invented the internet.</span>
 	        	</label><br>
 	        	<label>
-	        		<input type="radio" id="js-q1-ans-b" value="incorrect"> B. <span>High-Tech Management Linguistics and Computer System Software.</span>
+	        		<input type="radio" name="js-question-1" id="js-q1-ans-b" value="incorrect"> B. <span>High-Tech Management Linguistics and Computer System Software.</span>
 	        	</label><br>
 	        	<label>
-	        		<input type="radio" id="js-q1-ans-c" value="correct"> C. <span>HyperText Markup Language and Cascading Style-Sheets.</span>
+	        		<input type="radio" name="js-question-1" id="js-q1-ans-c" value="correct"> C. <span>HyperText Markup Language and Cascading Style-Sheets.</span>
 	        	</label><br>
 	        	<label>
-	        		<input type="radio" id="js-q1-ans-d" value="incorrect"> D. <span>They are the commands that describe the structure and form of a website.</span>
+	        		<input type="radio" name="js-question-1" id="js-q1-ans-d" value="incorrect"> D. <span>They are the commands that describe the structure and form of a website.</span>
 	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-q1-submit">Submit</button>
+	        	<button type="submit" class="button" id="js-button-q1-submit">Submit</button>
         </fieldset>
     </form>
 
