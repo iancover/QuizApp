@@ -18,7 +18,9 @@
       <div class="score">Incorrect: <span class="js-score-incorrect">0</span></div>
     </aside>
     
-    <section id="js-insert-template">
+<!--     <section id="js-insert-question">
+    	
+    </section> -->
 
       <form class="form-question" id="js-form-begin-quiz" hidden>
         <div class="question" id="js-text-begin-quiz">
@@ -29,9 +31,7 @@
         <button class="button" id="js-button-start">Start</button>
       </form>
 
-    </section>
-
-      <form class="form-question" id="js-form-temp" hidden>
+<!--       <form class="form-question" id="js-form-temp" hidden>
         <fieldset id="">
         	<legend id="">1. Question goes here?</legend><br>
 	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
@@ -41,36 +41,49 @@
 	        		<br>
 	        	<button class="button" id="js-button-submit-temp">Submit</button>
         </fieldset>
-      </form>
+      </form> -->
 
-<!-- 
-		On click 'Start' 
-			1. add 'hidden' to '#js-form-begin-quiz'
-			2. remove 'hidden' to '#js-form-q1' 
-		
-		On click 'Submit'
-			1. find 'correct' value
-				if value = 'correct' - score-correct++
-				else score-incorrect++
+      <!-- 
 
-		On click 'End'
-			1. reset form and restart test
- -->
+	currentQuestion = 
 
-	<form class="form-question" id="js-form-end-quiz" >
-        <div class="question" id="js-text-end-quiz">
-        	<p>Thank you for taking the quiz!</p><br>
-        	<p>Press "End"</p>
-        </div><br>
+	currentQuestion.append()
 
-        <button class="button" id="js-button-end">End</button>
-    </form>
+	currentQuestion.remove()
+
+	on.click of 'js-start-button'
+		currentQuestion.show
 
 
-<!-- ****** ALL QUESTIONS BELOW ********** -->
+	correctAnswer = $().find(value = 'correct')
 
-<!-- jquery: this.next() (add/remove attr hidden or use 'show' method) - gets you the next element -->
-<!-- if using 'id' with all the A,B,C,D answers, then must make them unique. -->
+	correctAnswer = input.attr('value') = "correct"
+
+	if the input checked = input w value = correct > score-correct++
+
+	this.value = 'correct'
+
+      if ( ('#js-q1-ans-c').checked = true) {
+		score-correct++
+      }
+	
+
+	form.next()
+	form.show()
+	form.hide()
+	.val()
+
+var currentQuestion = allQuestions[i];
+
+allQuestions = [$('#js-form-q1'),$('#js-form-q2'),$('#js-form-q3'),$('#js-form-q4'),$('#js-form-q5'),$('#js-form-q6'),$('#js-form-q7'),$('#js-form-q8'),$('#js-form-q9'),$('#js-form-q10')];
+
+for (var i=0; i<allQuestions.length; i++) {
+	currentQuestion.show();
+}
+
+
+      -->
+
 
     <form class="form-question" id="js-form-q1" hidden>
         <fieldset id="">
@@ -269,6 +282,15 @@
 	        	<button class="button" id="js-button-q10-submit">Submit</button>
         </fieldset>
     </form>
+
+    <form class="form-question" id="js-form-end-quiz" hidden>
+	    <div class="question" id="js-text-end-quiz">
+	        	<p>Thank you for taking the quiz!</p><br>
+	        	<p>Press "End"</p>
+	    </div><br>
+
+	        <button class="button" id="js-button-end">End</button>
+	</form>
  
 
 
