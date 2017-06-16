@@ -57,7 +57,7 @@
 			1. reset form and restart test
  -->
 
-	<form class="form-question" id="js-form-end-quiz" hidden>
+	<form class="form-question" id="js-form-end-quiz" >
         <div class="question" id="js-text-end-quiz">
         	<p>Thank you for taking the quiz!</p><br>
         	<p>Press "End"</p>
@@ -69,9 +69,10 @@
 
 <!-- ****** ALL QUESTIONS BELOW ********** -->
 
-<!-- jquery: this.next() (add/remove attr hidden) - gets you the next element -->
+<!-- jquery: this.next() (add/remove attr hidden or use 'show' method) - gets you the next element -->
+<!-- if using 'id' with all the A,B,C,D answers, then must make them unique. -->
 
-    <form class="form-question" id="js-form-q1" >
+    <form class="form-question" id="js-form-q1" hidden>
         <fieldset id="">
         	<legend id="">1. What does HTML and CSS stand for?</legend><br>
 	        	<label>
@@ -87,116 +88,185 @@
 	        		<input type="radio" id="js-q1-ans-d" value="incorrect"> D. <span>They are the commands that describe the structure and form of a website.</span>
 	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit-q1">Submit</button>
+	        	<button class="button" id="js-button-q1-submit">Submit</button>
         </fieldset>
     </form>
 
     <form class="form-question" id="js-form-q2" hidden>
         <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+        	<legend id="">2. What is the difference between the "class" and "id" attributes?</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q2-ans-a" value="incorrect"> A. <span>The "id" attribute is only used to add color to text.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q2-ans-b" value="incorrect"> B. <span>They are not attributes, they are selectors.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q2-ans-c" value="correct"> C. <span>The "class" attribute is used to select multiple elements, while "id" identifies a specific element.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q2-ans-d" value="incorrect"> D. <span>The "class" attribute defines when classes start.</span>
+	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit">Submit</button>
+	        	<button class="button" id="js-button-q2-submit">Submit</button>
         </fieldset>
     </form>
 
     <form class="form-question" id="js-form-q3" hidden>
         <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+        	<legend id="">3. What is !DOCTYPE and what does it do?</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q3-ans-a" value="incorrect"> A. <span>It defines the type of doctor that can fix HTML.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q3-ans-b" value="correct"> B. <span>It's a declaration that tells the browser the version of markup language used on the document.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q3-ans-c" value="incorrect"> C. <span>It's a set of instructions that reset the webpage.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q3-ans-d" value="incorrect"> D. <span>It's the tag that links the HTML file with the CSS file.</span>
+	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit">Submit</button>
+	        	<button class="button" id="js-button-q3-submit">Submit</button>
         </fieldset>
     </form>
 
     <form class="form-question" id="js-form-q4" hidden>
         <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+        	<legend id="">4. What is the &lt;script&gt; element and what is it used for?</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q4-ans-a" value="incorrect"> A. <span>It is a JavaScript command that tells the webpage when to refresh and is used at the beginning of a document.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q4-ans-b" value="incorrect"> B. <span>It is what writers use to start an online novel or the script of a movie.</span>
+	        		</label><br>
+	        	<label><input type="radio" id="js-q4-ans-c" value="correct"> C. <span>It is a tag used to define a client-side script and can contain scripting statements or point to a script file.</span>
+	        	</label><br>
+	        	<label><input type="radio" id="js-q4-ans-d" value="incorrect"> D. <span></span></label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit">Submit</button>
+	        	<button class="button" id="js-button-q4-submit">Submit</button>
         </fieldset>
     </form>
 
     <form class="form-question" id="js-form-q5" hidden>
         <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+        	<legend id="">5. Define Control Flow and give an example of it.</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q5-ans-a" value="incorrect"> A. <span>It's the way a web designer controls the flow in which a user will navigate through a website.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q5-ans-b" value="incorrect"> B. <span>It is the language that tells the computer where to direct the commands found on an application.</span>
+				</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q5-ans-c" value="incorrect"> C. <span>It controls the flow of the internet when using ‘http:’ or ‘https:’</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q5-ans-d" value="correct"> D. <span>The order in which instructions are executed using conditionals like: if, else, or else if</span>
+	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit">Submit</button>
+	        	<button class="button" id="js-button-q5-submit">Submit</button>
         </fieldset>
     </form>    
 
     <form class="form-question" id="js-form-q6" hidden>
         <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+        	<legend id="">6. What are loops used for?</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q6-ans-a" value="incorrect"> A. <span>They are used to keep the website running on the same server without interruption.</span>
+				</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q6-ans-b" value="incorrect"> B. <span>It is a code that is running in the background waiting for the user to make an action.</span>
+				</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q6-ans-c" value="incorrect"> C. <span>It is the code used when creating a circle with animation on a webpage.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q6-ans-d" value="correct"> D. <span>Loops are used to execute a block of code a number of times.</span>
+	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit">Submit</button>
+	        	<button class="button" id="js-button-q6-submit">Submit</button>
         </fieldset>
     </form>
 
     <form class="form-question" id="js-form-q7" hidden>
         <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+        	<legend id="">7. In JavaScript, what could be said about Objects?</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q7-ans-a" value="incorrect"> A. <span>It can be anything that describes something on a website, like a box or a paragraph.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q7-ans-b" value="incorrect"> B. <span>It is the action that a system takes when they want to contest an expression.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q7-ans-c" value="incorrect"> C. <span>Objects are blocks or code that are written inside a function and always result in something true.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q7-ans-d" value="correct"> D. <span>Objects are variable that may contain many values including other variables and functions.</span>
+	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit">Submit</button>
+	        	<button class="button" id="js-button-q7-submit">Submit</button>
         </fieldset>
     </form>
 
     <form class="form-question" id="js-form-q8" hidden>
         <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+        	<legend id="">8. What is a fact about Vanilla JavaScript?</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q8-ans-a" value="incorrect"> A. <span>It is the scripting that designers use to define colors that are similar to shades of beige.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q8-ans-b" value="correct"> B. <span>It is a term used to describe using plain JavaScript without any additional libraries like jQuery.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q8-ans-c" value="incorrect"> C. <span>It was invented in 1997 by the developers that designed the Blue Bell Ice Cream website.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q8-ans-d" value="incorrect"> D. <span>JavaScript language invented by Vanilla Ice, after quitting as a rapper and beginning his career in web development.</span>
+	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit">Submit</button>
+	        	<button class="button" id="js-button-q8-submit">Submit</button>
         </fieldset>
     </form>
 
     <form class="form-question" id="js-form-q9" hidden>
         <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+        	<legend id="">9. Name a difference between a block-level element and an inline element?</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q9-ans-a" value="correct"> A. <span>A block-level element always starts on a new line and take up the entire width available, the inline element doesn’t start on a new line and only takes the necessary width.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q9-ans-b" value="incorrect"> B. <span>Block-level elements are used to describe a block, vs inline which will only be used when the elements are lines.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q9-ans-c" value="incorrect"> C. <span>Block-level elements are used to block ads and pop-ups, and inline will display them in a line.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q9-ans-d" value="incorrect"> D. <span>There’s no difference except inline elements start in a new line.</span>
+	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit">Submit</button>
+	        	<button class="button" id="js-button-q9-submit">Submit</button>
         </fieldset>
     </form>
 
 
     <form class="form-question" id="js-form-q10" hidden>
         <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+        	<legend id="">10. How would you describe Semantic HTML?</legend><br>
+	        	<label>
+	        		<input type="radio" id="js-q10-ans-a" value="incorrect"> A. <span>It is a special language within HTML that uses specific tags and elements only available on this language.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q10-ans-b" value="incorrect"> B. <span>It is a more logical way to style HTML by writing the styling properties within the HTML elements.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q10-ans-c" value="correct"> C. <span>It is a more proper way to write HTML, using correct indentations and proper tags, which can help screen readers and web browsers identify elements on a page better.</span>
+	        	</label><br>
+	        	<label>
+	        		<input type="radio" id="js-q10-ans-d" value="incorrect"> D. <span>Semantic HTML refers to writing out plain words first to start a mockup of what your HTML code will look like.</span>
+	        	</label><br>
 	        		<br>
-	        	<button class="button" id="js-button-submit">Submit</button>
+	        	<button class="button" id="js-button-q10-submit">Submit</button>
         </fieldset>
     </form>
  
