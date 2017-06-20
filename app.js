@@ -1,15 +1,36 @@
+// Challenge: QuizApp
+
+
+// Listening function for the 'start' button
+
 $("#js-button-start").click(function(event){
-	console.log('hello world');
+	console.log('start button clicked');
 	event.preventDefault();
 	$("#js-form-begin-quiz").hide();
 	$('form').first().show();
 });
 
+// Listening for the selection of each form
+
 $('form').each(function(index, value) { // loop through each form
-	$(this).find('input[type="radio"]').each(function() { // loop through each radio of each form
+	$('input').click(function(event) { // listens first for the form to be clicked
+		$(this).find('input[type="radio"]').each(function() { // loop through each radio of each form
 		$(this).attr('name', `js-question-${index + 1}`); // set the name to the form index
 	})
+	console.log('radio form selected');
+	});
+
 });
+
+
+
+// Note: need to change this to listen for selection of radio
+
+// Note: must make form reset 
+
+
+
+// Listening for the 'submit' form (same as onclick 'submit' button)
 
 $('form').submit(function(event){
 	event.preventDefault();
