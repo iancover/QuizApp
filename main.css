@@ -39,7 +39,7 @@ input {
   margin-left: 15px;
 }
 
-button {
+button, end-button {
   font-size: 12px;
   font-weight: bold;
   margin-left: 10px;
@@ -48,3 +48,4 @@ button {
   border-radius: 5px;
   background-color: #00D476;
 }
+

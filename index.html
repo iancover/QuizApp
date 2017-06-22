@@ -20,76 +20,17 @@
       <div class="score">Incorrect: <span class="js-score-incorrect">0</span></div>
     </aside>
     
-<!--     <section id="js-insert-question">
-    	
-    </section> -->
 
-      <div class="form-question" id="js-form-begin-quiz">
+
+    <div class="form-question" id="js-begin-quiz">
         <div class="question" id="js-text-begin-quiz">
         	<p>Take this quiz to test your front end developer knowledge.</p><br>
         	<p>Press "Start" to begin...Good Luck!</p>
         </div><br>
 
-        <a href="#" class="button" id="js-button-start">Start</a>
-      </div>
-
-<!--       <form class="form-question" id="js-form-temp" hidden>
-        <fieldset id="">
-        	<legend id="">1. Question goes here?</legend><br>
-	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
-	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
-	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
-	        		<br>
-	        	<button class="button" id="js-button-submit-temp">Submit</button>
-        </fieldset>
-      </form> -->
-
-      <!-- 
-
-	currentQuestion = 
-
-	currentQuestion.append()
-
-	currentQuestion.remove()
-
-	on.click of 'js-start-button'
-		currentQuestion.show
-
-
-	correctAnswer = $().find(value = 'correct')
-
-	correctAnswer = input.attr('value') = "correct"
-
-	if the input checked = input w value = correct > score-correct++
-
-	this.value = 'correct'
-
-      if ( ('#js-q1-ans-c').checked = true) {
-		score-correct++
-      }
-	
-
-	form.next()
-	form.show()
-	form.hide()
-	.val()
-
-var currentQuestion = allQuestions[i];
-
-allQuestions = [$('#js-form-q1'),$('#js-form-q2'),$('#js-form-q3'),$('#js-form-q4'),$('#js-form-q5'),$('#js-form-q6'),$('#js-form-q7'),$('#js-form-q8'),$('#js-form-q9'),$('#js-form-q10')];
-
-allQuestions = $('form').each(function(){
-	var form = $(this);
-	console.log($(form).attr('id'));
-});
-
-for (var i=0; i<allQuestions.length; i++) {
-	currentQuestion.show();
-}
-
-
-      -->
+<!--         <a href="#" class="button" id="js-button-start">Start</a>-->       
+		<button class="button" id="js-button-start">Start</button>
+    </div>
 
 
     <form class="form-question" id="js-form-q1" hidden>
@@ -108,7 +49,7 @@ for (var i=0; i<allQuestions.length; i++) {
 	        		<input type="radio" name="js-question-1" id="js-q1-ans-d" value="incorrect"> D. <span>They are the commands that describe the structure and form of a website.</span>
 	        	</label><br>
 	        		<br>
-	        	<button type="submit" class="button" id="js-button-q1-submit">Submit</button>
+	        	<button class="button" id="js-button-q1-submit">Submit</button>
         </fieldset>
     </form>
 
@@ -116,16 +57,16 @@ for (var i=0; i<allQuestions.length; i++) {
         <fieldset id="">
         	<legend id="">2. What is the difference between the "class" and "id" attributes?</legend><br>
 	        	<label>
-	        		<input type="radio" id="js-q2-ans-a" value="incorrect"> A. <span>The "id" attribute is only used to add color to text.</span>
+	        		<input type="radio" name="js-question-2" id="js-q2-ans-a" value="incorrect"> A. <span>The "id" attribute is only used to add color to text.</span>
 	        	</label><br>
 	        	<label>
-	        		<input type="radio" id="js-q2-ans-b" value="incorrect"> B. <span>They are not attributes, they are selectors.</span>
+	        		<input type="radio" name="js-question-2" id="js-q2-ans-b" value="incorrect"> B. <span>They are not attributes, they are selectors.</span>
 	        	</label><br>
 	        	<label>
-	        		<input type="radio" id="js-q2-ans-c" value="correct"> C. <span>The "class" attribute is used to select multiple elements, while "id" identifies a specific element.</span>
+	        		<input type="radio" name="js-question-2" id="js-q2-ans-c" value="correct"> C. <span>The "class" attribute is used to select multiple elements, while "id" identifies a specific element.</span>
 	        	</label><br>
 	        	<label>
-	        		<input type="radio" id="js-q2-ans-d" value="incorrect"> D. <span>The "class" attribute defines when classes start.</span>
+	        		<input type="radio" name="js-question-2" id="js-q2-ans-d" value="incorrect"> D. <span>The "class" attribute defines when classes start.</span>
 	        	</label><br>
 	        		<br>
 	        	<button class="button" id="js-button-q2-submit">Submit</button>
@@ -290,15 +231,17 @@ for (var i=0; i<allQuestions.length; i++) {
         </fieldset>
     </form>
 
+    <!-- add div with message -->
+
     <form class="form-question" id="js-form-end-quiz" hidden>
 	    <div class="question" id="js-text-end-quiz">
 	        	<p>Thank you for taking the quiz!</p><br>
 	        	<p>Press "End"</p>
 	    </div><br>
+	    
+	    <button class="end-button" id="js-button-end">End</button>
 
-	        <button class="button" id="js-button-end">End</button>
 	</form>
- 
 
 
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
@@ -310,7 +253,26 @@ for (var i=0; i<allQuestions.length; i++) {
 
 
 
+<!-- ***** Additional stuff ****** -->
 
+
+<!-- 
+
+html template
+
+      <form class="form-question" id="js-form-temp" hidden>
+        <fieldset id="">
+        	<legend id="">1. Question goes here?</legend><br>
+	        	<label><input type="radio" id="js-ans-a" value=""> A. <span>Text here</span></label><br>
+	        	<label><input type="radio" id="js-ans-b" value=""> B. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-c" value=""> C. <span></span></label><br>
+	        	<label><input type="radio" id="js-ans-d" value=""> D. <span></span></label><br>
+	        		<br>
+	        	<button class="button" id="js-button-submit-temp">Submit</button>
+        </fieldset>
+      </form> 
+
+-->
 
 
 
